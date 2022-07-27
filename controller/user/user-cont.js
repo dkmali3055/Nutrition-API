@@ -1,7 +1,6 @@
 const user = require("../../model/user/user-schema");
-const Meal = require("../../model/meal/meal-schema");
 const { createUser,updateUser } = require("../../model/user/user-model");
-const User = require("../../model/user/user-schema");
+
 module.exports = {
   // create get Users object for get all user data
   get_user: (req, res) => {
@@ -20,9 +19,12 @@ module.exports = {
       });
   },
 
+  //function for get user data from client-side and save in db 
   create_user: async (req, res) => {
     try {
       const data = req.body;
+
+      //call createUser function from user-model file
       createUser(data, (err, result) => {
         if (err) {
           console.log(err);
@@ -41,10 +43,11 @@ module.exports = {
       console.log(error.msg);
     }
   },
+  //create update user function for get data and save in DB
   update_user: async (req,res) => {
-   // const findOneAndUpdate()
    try{
    const body = req.body;
+// call updateuser function from user model file for save data
    updateUser(body,(result) => {    
     if (result !== null) {
       return res.status(200).json({

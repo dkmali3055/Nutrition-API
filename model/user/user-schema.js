@@ -1,8 +1,7 @@
 const mongoose = require("mongoose"); //import mongoose dependencies
 
-//const DB = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.qbbas.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 
-// connect database by mongoose
+// create shema
 require('../db-conn')
 const userSchema = new mongoose.Schema({
   name: {
@@ -22,6 +21,6 @@ const userSchema = new mongoose.Schema({
 }],
 });
 
-const User = new mongoose.model("User", userSchema);
+const User = new mongoose.model("User", userSchema); // create model for schema
 
 module.exports = User;

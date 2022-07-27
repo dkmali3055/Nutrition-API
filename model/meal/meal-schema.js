@@ -1,5 +1,6 @@
 const mongoose = require("mongoose"); //import mongoose dependencies
 
+// create meal schema
 require('../db-conn')
 const mealSchema = new mongoose.Schema({
   category: {
@@ -15,6 +16,6 @@ const mealSchema = new mongoose.Schema({
  
 });
 
-const Meal = new mongoose.model("Meal", mealSchema);
+const Meal = new mongoose.model("Meal", mealSchema); // meal model
 
 module.exports = Meal;

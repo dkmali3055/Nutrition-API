@@ -19,6 +19,6 @@ const foodItemSchema = new mongoose.Schema({
   itemWeight: Number,
 });
 
-const FoodItem = new mongoose.model("FoodItem", foodItemSchema);
+const FoodItem = new mongoose.model("FoodItem", foodItemSchema); //model for food-item
 
 module.exports = FoodItem;
