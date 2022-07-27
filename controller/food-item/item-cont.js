@@ -37,5 +37,3 @@ module.exports = {
     update_item: async (req,res) =>{
         console.log(error.msg)
     }
-
-}
