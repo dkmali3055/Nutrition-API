@@ -5,7 +5,7 @@ module.exports = {
   // create get Users object for get all user data
   get_user: (req, res) => {
     user
-      .findOne({ name: "dipak" })
+      .find()
       .populate({
         path: "mealPlan.meals",
         populate: { path: "foodItem" },
@@ -53,6 +53,7 @@ module.exports = {
       return res.status(200).json({
         success: 1,
         data: "Data updation successfully! ",
+        result:result
       });
     } else {
       return res.json({

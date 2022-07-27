@@ -26,7 +26,7 @@ module.exports = {
 updateMeal: async (data, cb) => { 
     //create function for update user
     try {
-      const filter = { name: data.name };
+      const filter = { id: data.id };
       const update = data;
       const result = await meal.findOneAndUpdate(filter, update);
       //console.log(result)

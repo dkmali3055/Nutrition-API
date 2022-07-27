@@ -43,6 +43,7 @@ module.exports = {
             return res.status(200).json({
               success: 1,
               data: "Data updation successfully! ",
+              result:result
             });
           } else {
             return res.json({
